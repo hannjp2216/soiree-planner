@@ -33,14 +33,14 @@ function renderGuestList() {
   guests.forEach((g) => {
     const li = document.createElement("li");
     const sClass = g.status === "Attending" ? "status-attending" : g.status === "Maybe" ? "status-maybe" : "status-declined";
-    li.innerHTML = <div><strong>${g.name}</strong><div>${g.plusOne ? "+1 guest" : "Solo"}</div></div><span class="status-badge ${sClass}">${g.status}</span>;
+    li.innerHTML = `<div class="guest-info"><strong>${g.name}</strong><div class="guest-meta">${g.plusOne ? "+1 guest" : "Solo"}</div></div><span class="status-badge ${sClass}">${g.status}</span>`;
     guestList.appendChild(li);
     if (g.status === "Attending") {
       totalAttending += 1;
       if (g.plusOne) { totalAttending += 1; }
     }
   });
-  guestCounterEl.textContent = Total Attending: ${totalAttending};
+  guestCounterEl.textContent = `Total Attending: ${totalAttending}`;
   emptyGuests.hidden = guests.length > 0;
 }
 renderCountdown();

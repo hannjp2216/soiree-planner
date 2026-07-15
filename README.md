@@ -88,3 +88,7 @@ Works in all modern browsers that support CSS `backdrop-filter` and ES6 JavaScri
 ## License
 
 This project is open source. Feel free to fork, adapt, and host your own soirée.
+
+---
+
+## A project from Global Hack Week: Season Launch

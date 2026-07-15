@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Soirée</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="string-lights" aria-hidden="true"></div>
+
+  <header class="hero">
+    <h1>Summer Soirée</h1>
+    <p class="subtitle">Three nights, warm glow and a summer drink under the lights</p>
+  </header>
+
+  <section class="countdown-section">
+    <h2>Opening night: Golden hour countdown</h2>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown-unit">
+        <span class="countdown-value" id="days">03</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-value" id="hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-value" id="minutes">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-value" id="seconds">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+    <p class="countdown-ended" id="countdown-ended" hidden>The soirée has begun!</p>
+  </section>
+
+  <main class="main-grid">
+    <section class="panel guest-panel">
+      <h2>Guest List &amp; RSVPs</h2>
+
+      <form id="rsvp-form" class="rsvp-form">
+        <div class="form-group">
+          <label for="guest-name">Guest's Name</label>
+          <input type="text" id="guest-name" name="guestName" placeholder="Enter full name" required />
+        </div>
+
+        <div class="form-group">
+          <span class="label">RSVP Status</span>
+          <div class="radio-group">
+            <label><input type="radio" name="rsvpStatus" value="Attending" checked /> Attending</label>
+            <label><input type="radio" name="rsvpStatus" value="Maybe" /> Maybe</label>
+            <label><input type="radio" name="rsvpStatus" value="Declined" /> Declined</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="plus-one" name="plusOne" />
+            Bringing a plus-one
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Guest</button>
+      </form>
+
+      <div class="guest-list-wrap">
+        <h3>Registered Guests</h3>
+        <ul id="guest-list" class="guest-list"></ul>
+        <p id="empty-guests" class="empty-state">No guests yet — be the first to RSVP.</p>
+      </div>
+    </section>
+
+    <section class="panel menu-panel">
+      <h2>Signature Drink Menu</h2>
+      <div class="menu-cards">
+        <article class="menu-card">
+          <span class="night-badge">1st Night</span>
+          <h3>Aperol Spritz</h3>
+          <p>Bitter orange, prosecco, and a splash of soda — golden and effervescent.</p>
+        </article>
+        <article class="menu-card">
+          <span class="night-badge">2nd Night</span>
+          <h3>Roy Rogers</h3>
+          <p>Cola over ice with a cherry crown — classic, crisp, and crowd-pleasing.</p>
+        </article>
+        <article class="menu-card">
+          <span class="night-badge">3rd Night</span>
+          <h3>Lucky Devil</h3>
+          <p>Dark rum, ginger, and citrus — a bold finale under the string lights.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
